@@ -1,0 +1,28 @@
+/* Custom Navbar Styles */
+.custom-navbar {
+    background: linear-gradient(to right, #333333, #000000); /* Gray to Black Gradient */
+    padding: 10px 20px;
+}
+
+.custom-navbar .nav-link {
+    padding-right: 50px;
+    color: rgba(255, 255, 255, 0.6) !important; /* Dimmer white for non-active links */
+    font-weight: normal; /* Reset bold for all links */
+    transition: color 0.3s ease, font-weight 0.3s ease; /* Smooth hover effect */
+}
+.custom-navbar .nav-link.active {
+    color: white !important; /* Bright white for the active link */
+    font-weight: bold; /* Bold for the active link */
+}
+
+.nav-item{
+    padding-right: 60px;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #1100ff !important; /* Optional: Change text color on hover */
+}
+
+.custom-navbar .navbar-brand img {
+    height: 40px; /* Adjust logo height */
+}
