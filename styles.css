@@ -1,28 +1,101 @@
 /* Custom Navbar Styles */
 .custom-navbar {
-    background: linear-gradient(to right, #333333, #000000); /* Gray to Black Gradient */
-    padding: 10px 20px;
+    background-image: url('/assets/ant_wide_latest.png'); /* Background image for the navbar */
+    background-size: cover; /* Ensure the image covers the entire navbar */
+    background-position: top; /* Center the image horizontally */
+    background-repeat: no-repeat; /* Prevent tiling */
+    position: relative; /* Allow overlay effects */
+    height: 30%; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: flex-start; /* Push items to the top */
+    padding: 10px 20px; /* Add padding */
 }
 
+/* Navigation Links */
 .custom-navbar .nav-link {
-    padding-right: 50px;
-    color: rgba(255, 255, 255, 0.6) !important; /* Dimmer white for non-active links */
-    font-weight: normal; /* Reset bold for all links */
-    transition: color 0.3s ease, font-weight 0.3s ease; /* Smooth hover effect */
-}
-.custom-navbar .nav-link.active {
-    color: white !important; /* Bright white for the active link */
-    font-weight: bold; /* Bold for the active link */
+    color:#FFFFFF !important; /* Ensure text is visible */
+    font-weight: bolder; /* lighter text */
+    font-stretch: semi-expanded;
+    font-size: 15px;
+    text-shadow: none; /* Add subtle text shadow for better contrast */
+    transition: color 0.3s ease;
 }
 
-.nav-item{
-    padding-right: 60px;
-}
-
-.custom-navbar .nav-link:hover {
-    color: #1100ff !important; /* Optional: Change text color on hover */
+.custom-navbar .navbar-brand {
+    z-index: 2; /* Place above the overlay */
+    margin-left: -90; /* Ensure no unnecessary left margin */
+    margin-top: -50;
 }
 
 .custom-navbar .navbar-brand img {
-    height: 40px; /* Adjust logo height */
+    height: 300px; /* Adjust logo size */
+    width: 300px;
+}
+
+/* Navbar Collapse (Responsive Design) */
+.custom-navbar .collapse {
+    z-index: 2; /* Ensure links are above the overlay */
+}
+
+/* Nav Item Spacing */
+.nav-item {
+    margin-left: 30px; /* Add spacing between items */
+}
+
+.custom-navbar .nav-link {
+    color: white; /* Ensure visibility on image */
+    z-index: 2; /* Ensure above overlay */
+    margin-left: 15px; /* Add spacing between nav links */
+}
+
+/* Adjust navbar height for smaller screens */
+@media (max-width: 768px) {
+    .custom-navbar {
+        height: auto; /* Adjust height */
+        padding: 10px;
+    }
+}
+
+/* Hover Effect */
+.custom-navbar .nav-link:hover {
+    color: #FFFFFF !important; 
+}
+
+#navbarNav {
+    margin-right: 50px;
+    margin-top: -100;
+}
+
+
+
+
+
+
+/* Content Section Styles */
+.content-section {
+    background-color: #3C3C3C; /* Dark gray background */
+    padding: 50px 20px; /* Add space around content */
+    color: white; /* Text color */
+}
+
+.profile-img {
+    width: 100%; /* Make image responsive */
+    max-width: 250px; /* Limit maximum width */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+}
+
+.section-header {
+    font-size: 2rem; /* Header size */
+    font-weight: bold;
+    text-transform: uppercase; /* Make header text uppercase */
+    margin-bottom: 20px;
+}
+
+.section-paragraph {
+    font-size: 1rem; /* Adjust text size */
+    font-weight: 100;
+    line-height: 1.5; /* Line spacing for readability */
 }
