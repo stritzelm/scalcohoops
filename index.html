@@ -5,48 +5,66 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg custom-navbar">
+        <nav class="navbar navbar-expand-lg test-navbar">
             <div class="container-fluid">
                 <!-- Navbar Brand -->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="/assets/FullLogo_Transparent.png" alt="MySite Logo">
                 </a>
-                
                 <div id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">HOME</a>
+                            <a class="nav-link" href="index.html" style="padding-right: 50px;">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">ABOUT ME</a>
+                            <a class="nav-link" href="about.html" style="padding-right: 50px;">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="testimonials.html">TESTIMONIALS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contactus.html">CONTACT ME</a>
+                            <a class="nav-link active" href="testimonials.html" aria-current="page" style="padding-right: 50px;" >TESTIMONIALS</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Content Section -->
-        <div class="content-section">
+        <div class="content test-content-section">
             <div class="container">
                 <div class="row align-items-center">
+                    <div class="col-md-2">
+                    </div>
                     <!-- Image Section -->
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-3">
                         <img src="/assets/lakers_pro_pic.png" alt="Lakers Pro Picture" class="profile-img">
                     </div>
                     <!-- Text Section -->
-                    <div class="col-md-8">
-                        <h2 class="section-header">ANTHONY MANISCALCO</h2>
-                        <p class="section-paragraph">
+                    <div class="col-md-6">
+                        <h2 class="section-header">COACH ANTHONY MANISCALCO</h2>
+                        <p class="section-paragraph" style="padding-bottom: 20px;">
                             Trainer Anthony has worked with hundreds of elite basketball players over the years, helping them unlock their full potential. His personalized training techniques focus on skill development, discipline, and individual improvement. Scalco Skills welcomes grade school and high school players from over N schools across the Chicagoland area.
                         </p>
+                        <button class="btn custom-btn" onclick="location.href='testimonials.html'">View Testimonials</button>
+                    </div>
+                </div>
+                <div class="row align-items-center" style="padding-top:75px;">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="/assets/ant_wide_latest.png" alt="Lakers Pro Picture" class="profile-img">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="section-header">SKILLS TRAINING</h2>
+                        <p class="section-paragraph" style="padding-bottom: 20px;">
+                            Trainer Anthony has worked with hundreds of elite basketball players over the years, helping them unlock their full potential. His personalized training techniques focus on skill development, discipline, and individual improvement. Scalco Skills welcomes grade school and high school players from over N schools across the Chicagoland area.
+                        </p>
+                        <button class="btn custom-btn" onclick="location.href='about.html'">About Training</button>
                     </div>
                 </div>
             </div>
         </div>
-    </body>   
+        <footer class="py-4">
+            <div class="container text-center">
+                <p>&copy; 2025 Scalco Skills. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
 </html>

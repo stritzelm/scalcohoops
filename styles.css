@@ -1,78 +1,3 @@
-/* Custom Navbar Styles */
-.custom-navbar {
-    background-image: url('/assets/ant_wide_latest.png'); /* Background image for the navbar */
-    background-size: cover; /* Ensure the image covers the entire navbar */
-    background-position: top; /* Center the image horizontally */
-    background-repeat: no-repeat; /* Prevent tiling */
-    position: relative; /* Allow overlay effects */
-    height: 30%; /* Adjust the height as needed */
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the top */
-    justify-content: flex-start; /* Push items to the top */
-    padding: 10px 20px; /* Add padding */
-}
-
-/* Navigation Links */
-.custom-navbar .nav-link {
-    color:#FFFFFF !important; /* Ensure text is visible */
-    font-weight: bolder; /* lighter text */
-    font-stretch: semi-expanded;
-    font-size: 15px;
-    text-shadow: none; /* Add subtle text shadow for better contrast */
-    transition: color 0.3s ease;
-}
-
-.custom-navbar .navbar-brand {
-    z-index: 2; /* Place above the overlay */
-    margin-left: -90; /* Ensure no unnecessary left margin */
-    margin-top: -50;
-}
-
-.custom-navbar .navbar-brand img {
-    height: 300px; /* Adjust logo size */
-    width: 300px;
-}
-
-/* Navbar Collapse (Responsive Design) */
-.custom-navbar .collapse {
-    z-index: 2; /* Ensure links are above the overlay */
-}
-
-/* Nav Item Spacing */
-.nav-item {
-    margin-left: 30px; /* Add spacing between items */
-}
-
-.custom-navbar .nav-link {
-    color: white; /* Ensure visibility on image */
-    z-index: 2; /* Ensure above overlay */
-    margin-left: 15px; /* Add spacing between nav links */
-}
-
-/* Adjust navbar height for smaller screens */
-@media (max-width: 768px) {
-    .custom-navbar {
-        height: auto; /* Adjust height */
-        padding: 10px;
-    }
-}
-
-/* Hover Effect */
-.custom-navbar .nav-link:hover {
-    color: #FFFFFF !important; 
-}
-
-#navbarNav {
-    margin-right: 50px;
-    margin-top: -100;
-}
-
-
-
-
-
-
 /* Content Section Styles */
 .content-section {
     background-color: #3C3C3C; /* Dark gray background */
@@ -98,4 +23,128 @@
     font-size: 1rem; /* Adjust text size */
     font-weight: 100;
     line-height: 1.5; /* Line spacing for readability */
+}
+
+
+body {
+    background-color: whitesmoke;
+    margin: 0; /* Remove default body margins */
+    padding: 0; /* Remove default body padding */
+    height: 100vh; /* Ensure it covers the full viewport height */
+    width: 100vw; /* Ensure it covers the full viewport width */
+}
+
+.container-fluid {
+    display: flex;
+    align-items: flex-start; /* Align children to the top */
+    justify-content: space-between; /* Spread out the items horizontally */
+    height: 100%; /* Ensure it fills the parent height */
+}
+
+.testimonial-divider {
+    border: 0;
+    height: 1px;
+    background-color: #3C3C3C;
+    margin: 20px 0;
+    opacity: 0.6; /* Optional: Adjust opacity for a subtle effect */
+}
+
+
+/* Content Section Styles */
+.test-content-section {
+    padding: 50px 20px; /* Add space around content */
+    color: #3C3C3C; /* Text color */
+    background-color: whitesmoke;
+}
+
+/* Custom Navbar Styles */
+.test-navbar {
+    background-color:#3C3C3C; /* Background image for the navbar */
+    background-size: cover; /* Ensure the image covers the entire navbar */
+    background-position: top; /* Center the image horizontally */
+    background-repeat: no-repeat; /* Prevent tiling */
+    height: 15%; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: flex-start; /* Push items to the top */
+    padding: 10px 20px; /* Add padding */
+}
+
+/* Custom Navbar Styles */
+.test-navbar .nav-link {
+    color: whitesmoke !important; /* Ensure text is visible */
+    font-weight: bolder; /* lighter text */
+    font-stretch: semi-expanded;
+    font-size: 15px;
+    text-shadow: none; /* Add subtle text shadow for better contrast */
+    transition: color 0.3s ease;
+}
+
+.test-navbar .navbar-brand {
+    z-index: 2; /* Place above the overlay */
+}
+
+.test-navbar .navbar-brand img {
+    /* height: 40%;
+    width: 70%; */
+    height: 75%; /* Maintain aspect ratio */
+}
+
+
+
+/* Navbar Collapse (Responsive Design) */
+.test-navbar .collapse {
+    z-index: 2; /* Ensure links are above the overlay */
+}
+
+.test-navbar .nav-link {
+    color: whitesmoke; /* Ensure visibility on image */
+    z-index: 2; /* Ensure above overlay */
+    margin-left: 15px; /* Add spacing between nav links */
+}
+
+/* Adjust navbar height for smaller screens */
+@media (max-width: 768px) {
+    .test-navbar {
+        height: auto; /* Adjust height */
+        padding: 10px;
+    }
+}
+
+/* Hover Effect */
+.test-navbar .nav-link:hover {
+    color:#8a8888 !important; 
+}
+
+
+.custom-btn {
+    background-color: #3C3C3C; /* White background */
+    color: white; /* Black text */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding for better spacing */
+    font-weight: lighter; /* Make text bold */
+}
+
+.custom-btn:hover {
+    border: 1px solid #3C3C3C; /* Black border */
+    background-color: white; /* Black background on hover */
+    color: black; /* White text on hover */
+}
+
+footer {
+    background-color: #3C3C3C; /* Black background */
+    color: whitesmoke; /* White text */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Allow the content section to grow and push the footer down */
+.content {
+    flex: 1;
 }
