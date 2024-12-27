@@ -55,6 +55,7 @@ body {
     padding: 50px 20px; /* Add space around content */
     color: #3C3C3C; /* Text color */
     background-color: whitesmoke;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Custom Navbar Styles */
@@ -74,11 +75,11 @@ body {
 /* Custom Navbar Styles */
 .test-navbar .nav-link {
     color: whitesmoke !important; /* Ensure text is visible */
-    font-weight: bolder; /* lighter text */
-    font-stretch: semi-expanded;
+    font-weight: lighter; /* lighter text */
     font-size: 15px;
     text-shadow: none; /* Add subtle text shadow for better contrast */
     transition: color 0.3s ease;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .test-navbar .navbar-brand {
@@ -90,7 +91,6 @@ body {
     width: 70%; */
     height: 75%; /* Maintain aspect ratio */
 }
-
 
 
 /* Navbar Collapse (Responsive Design) */
@@ -117,13 +117,13 @@ body {
     color:#8a8888 !important; 
 }
 
-
 .custom-btn {
     background-color: #3C3C3C; /* White background */
     color: white; /* Black text */
     border-radius: 50px; /* Rounded corners */
     padding: 10px 20px; /* Add padding for better spacing */
     font-weight: lighter; /* Make text bold */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .custom-btn:hover {
@@ -133,8 +133,8 @@ body {
 }
 
 footer {
-    background-color: #3C3C3C; /* Black background */
-    color: whitesmoke; /* White text */
+    background-color: whitesmoke; /* Black background */
+    color: #3C3C3C; /* White text */
 }
 
 html, body {
@@ -147,4 +147,23 @@ html, body {
 /* Allow the content section to grow and push the footer down */
 .content {
     flex: 1;
+}
+
+.footer-border {
+    border: 0;
+    height: 0.5px;
+    background-color: rgb(195, 192, 192);
+    margin: 5px 0;
+    opacity: 0.6; /* Optional: Adjust opacity for a subtle effect */
+}
+
+.py-4 p {
+    margin-bottom: 0px;
+}
+
+.py-4 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 10px;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
 }
