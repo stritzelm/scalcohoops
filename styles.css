@@ -16,7 +16,7 @@
     margin-bottom: 20px;
 }
 .section-paragraph {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 100;
     line-height: 1.5; 
     margin-top: 1rem;
@@ -25,6 +25,7 @@
 .page-title {
     font-size: 4rem; /* Header size */
     font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform: uppercase; /* Make header text uppercase */
     margin-bottom: 20px;
 }
@@ -120,7 +121,7 @@ body {
 .test-content-section {
     color: #3C3C3C; /* Text color */
     background-color: whitesmoke;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:ui-sans-serif, -apple-system, system-ui, Segoe UI, Helvetica, Apple Color Emoji, Arial, sans-serif, Segoe UI Emoji, Segoe UI Symbol;
 }
 .test-navbar {
     background-color:#3C3C3C;
@@ -137,7 +138,7 @@ body {
 .test-navbar .nav-link {
     color: whitesmoke !important; /* Ensure text is visible */
     font-weight: lighter; /* lighter text */
-    font-size: 25px;
+    font-size: 1rem;
     text-shadow: none; /* Add subtle text shadow for better contrast */
     transition: color 0.3s ease;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -170,7 +171,7 @@ body {
 .custom-btn {
     background-color: #3C3C3C; /* White background */
     color: white; /* Black text */
-    font-size: 25px;
+    font-size: 1rem;
     border-radius: 50px; /* Rounded corners */
     padding: 10px 20px; /* Add padding for better spacing */
     font-weight: lighter; /* Make text bold */
@@ -242,7 +243,7 @@ html, body {
     background-image: url('/assets/ant_wide_2.png');
     background-size: cover;
     background-position: top;
-    height: 500px; /* Make sure the height is set */
+    height: 400px; /* Make sure the height is set */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,4 +262,9 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease-in-out; /* Remove opacity transition */
+}
+
+.home-page-logo {
+    width: 320px;
+    height: 215px;
 }
