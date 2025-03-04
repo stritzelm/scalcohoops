@@ -2,7 +2,8 @@
 const routes = {
     "/home": "home.html",
     "/about": "about.html",
-    "/testimonials": "testimonials.html"
+    "/testimonials": "testimonials.html",
+    "/contact": "contact.html",
 };
 
 // Function to load HTML content dynamically
@@ -35,7 +36,6 @@ window.onpopstate = () => {
     navigateTo(location.pathname);
 };
 
-document.on
 
 // Initialize router on page load
 document.addEventListener("DOMContentLoaded", () => {
@@ -54,4 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
             navigateTo(route);
         });
     });
+
+    const logo = document.querySelector(".navbar-brand");
+    if (logo) {
+        logo.addEventListener("click", event => {
+            event.preventDefault();
+            navigateTo("/home");
+        });
+    }
 });
