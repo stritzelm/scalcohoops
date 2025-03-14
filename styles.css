@@ -109,7 +109,7 @@
 .test-navbar { 
     background-color:#3C3C3C;
     background-size: cover; 
-    max-height: 130px;
+    max-height: 140px;
     display: flex;
     padding: 10px 20px; 
 } 
