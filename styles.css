@@ -1,4 +1,3 @@
-/* Content Section Styles */
 .content-section {
     background-color: #3C3C3C; /* Dark gray background */
     padding: 50px 20px; /* Add space around content */
@@ -15,74 +14,42 @@
     font-weight: bold;
     margin-bottom: 20px;
 }
+
 .section-paragraph {
-    font-size: 1rem;
-    font-weight: 100;
+    font-size: 1.5rem;
+    font-weight: 400;
     line-height: 1.5; 
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
 .page-title {
     font-size: 4rem; /* Header size */
     font-weight: bold;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase; /* Make header text uppercase */
     margin-bottom: 20px;
 }
+
+
 .author-paragraph {
     position: relative; /* Ensure pseudo-elements are scoped to this container */
-    font-family: "Georgia", serif;
-    font-style: italic;
-    font-size: 1em;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
     background: whitesmoke;
     color: #3C3C3C;
     padding: 20px 40px; /* Add padding for space for pseudo-elements */
     border-radius: 10px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease-in-out; /* Remove opacity transition */
+    transition: transform 0.5s ease-in-out; 
 }
-.author-paragraph::before {
-    content: "\201C";
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    font-size: 50px;
-    color: #3C3C3C;
-    opacity: 1; /* Ensure quotes remain visible */
-    transition: none; /* Prevent quotes from fading */
-}
-.author-paragraph::after {
-    content: "\201D";
-    position: absolute;
-    bottom: -10px;
-    right: 10px;
-    font-size: 50px;
-    color: #3C3C3C;
-    opacity: 1; /* Ensure quotes remain visible */
-    transition: none; /* Prevent quotes from fading */
-}
-.author-paragraph.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-@media (max-width: 768px) {
-    .author-paragraph {
-        font-size: 1em;
-        padding: 15px 30px; /* Adjust padding */
-    }
-    .author-paragraph::before,
-    .author-paragraph::after {
-        font-size: 40px; /* Adjust size for mobile */
-    }
-}
+
 .testimonial-separator {
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, #dcdcdc, #f5f5f5, #dcdcdc); /* Replace with your choice */
+    background: linear-gradient(to right, #8c8c8c, #bfbfbf, #8c8c8c);
     margin: 20px auto;
     border-radius: 2px; /* Optional for rounded edges */
-
 }
 
 .testimonial-img {
@@ -91,13 +58,7 @@
     border-radius: 50%;
     margin-right: 15px;
 }
-body {
-    background-color: whitesmoke;
-    margin: 0; /* Remove default body margins */
-    padding: 0; /* Remove default body padding */
-    height: 100vh; /* Ensure it covers the full viewport height */
-    width: 100vw; /* Ensure it covers the full viewport width */
-}
+
 .container-fluid {
     display: flex;
     align-items: flex-start; /* Align children to the top */
@@ -121,61 +82,64 @@ body {
 .test-content-section {
     color: #3C3C3C; /* Text color */
     background-color: whitesmoke;
-    font-family:ui-sans-serif, -apple-system, system-ui, Segoe UI, Helvetica, Apple Color Emoji, Arial, sans-serif, Segoe UI Emoji, Segoe UI Symbol;
+    font-family: 'Poppins', sans-serif;
 }
-.test-navbar {
-    background-color:#3C3C3C;
-    background-size: cover; /* Ensure the image covers the entire navbar */
-    background-position: top; /* Center the image horizontally */
-    background-repeat: no-repeat; /* Prevent tiling */
-    height: 15%; /* Adjust the height as needed */
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the top */
-    justify-content: flex-start; /* Push items to the top */
-    padding: 10px 20px; /* Add padding */
+
+.test-navbar .navbar-nav {
+    flex-direction: row !important; /* Always stay in a row */
+    gap: 20px; /* Add spacing between items */
 }
+
+/* Ensure links don't stack */
+.test-navbar .nav-item {
+    display: inline-block;
+}
+
 .test-navbar .nav-link {
-    color: whitesmoke !important; /* Ensure text is visible */
-    font-weight: lighter; /* lighter text */
-    font-size: 1rem;
-    text-shadow: none; /* Add subtle text shadow for better contrast */
+    color: whitesmoke !important;
+    font-size: 1.5rem;
+    text-decoration: none;
     transition: color 0.3s ease;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.test-navbar .nav-link:hover {
+    color: #8a8888 !important;
+}
+
+.test-navbar { 
+    background-color:#3C3C3C;
+    background-size: cover; 
+    max-height: 130px;
+    display: flex;
+    padding: 10px 20px; 
+} 
+
 .test-navbar .navbar-brand {
-    z-index: 2; /* Place above the overlay */
+    z-index: 2; 
 }
+
 .test-navbar .navbar-brand img {
-    height: 75%; /* Maintain aspect ratio */
-}
-.test-navbar .collapse {
-    z-index: 2; /* Ensure links are above the overlay */
-}
-.test-navbar .nav-link {
-    color: whitesmoke; /* Ensure visibility on image */
-    z-index: 2; /* Ensure above overlay */
-    margin-left: 15px; /* Add spacing between nav links */
-}
-@media (max-width: 768px) {
-    .test-navbar {
-        height: auto; /* Adjust height */
-        padding: 10px;
-    }
+    width: 140px;
+    height: 100px;
+    display: block;
 }
 
 /* Hover Effect */
 .test-navbar .nav-link:hover {
     color:#8a8888 !important; 
 }
+
 .custom-btn {
     background-color: #3C3C3C; /* White background */
     color: white; /* Black text */
-    font-size: 1rem;
+    font-size: 1.5rem;
+    width: auto;
     border-radius: 50px; /* Rounded corners */
     padding: 10px 20px; /* Add padding for better spacing */
-    font-weight: lighter; /* Make text bold */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    white-space: nowrap;
 }
 .custom-btn:hover {
     border: 1px solid #3C3C3C; /* Black border */
@@ -207,7 +171,7 @@ html, body {
     margin-bottom: 0px;
 }
 .py-4 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding-bottom: 10px;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
@@ -215,10 +179,16 @@ html, body {
 
 .page-padding-all {
     padding: 100px 20px; 
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.contact-padding-all {
+    padding: 100px 20px; 
 }
 
 .contact-info {
-    font-size: 2rem; 
+    font-size: 1.5rem; 
     margin-top: 20px;
     background: whitesmoke;
     color: #3C3C3C;
@@ -240,31 +210,58 @@ html, body {
 }
 
 .home-background-image-section {
-    background-image: url('/assets/ant_wide_2.png');
+    background-image: url('/assets/ball_only_medium.jpg');
     background-size: cover;
-    background-position: top;
-    height: 400px; /* Make sure the height is set */
+    background-position: center;
+    height: 500px; /* Make sure the height is set */
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
 }
 
-.author-paragraph {
-    position: relative; /* Ensure pseudo-elements are scoped to this container */
-    font-family: "Georgia", serif;
-    font-style: italic;
-    font-size: 1em;
-    line-height: 1.6;
-    background: whitesmoke;
-    color: #3C3C3C;
-    padding: 20px 40px; /* Add padding for space for pseudo-elements */
-    border-radius: 10px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease-in-out; /* Remove opacity transition */
-}
-
 .home-page-logo {
     width: 240px;
     height: 161.25px;
+}
+
+@media (max-width: 768px) {
+    .section-paragraph {
+        font-size: 2rem;
+    }
+    .test-navbar .navbar-brand img  {
+        max-width: 50% !important;
+        height: auto !important;
+    }
+    .test-navbar .nav-link {
+        font-size: 2em;
+    }
+    .author-paragraph {
+        font-size: 2em;
+    }
+    .contact-info {
+        font-size: 2em;
+    }
+
+    .custom-btn {
+        font-size: 2em;
+    }
+
+    .author-paragraph {
+        font-size: 1em;
+        padding: 15px 30px; /* Adjust padding */
+    }
+    .author-paragraph::before,
+    .author-paragraph::after {
+        font-size: 40px; /* Adjust size for mobile */
+    }
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.bi-instagram {
+    font-size: 24px; 
+    color: #E4405F;
 }

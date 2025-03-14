@@ -29,6 +29,14 @@ async function navigateTo(route) {
 
     // Update browser history
     history.pushState({}, "", route);
+    // Update active navigation link
+    updateActiveLink(route);
+}
+
+function updateActiveLink(currentPath) {
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === currentPath);
+    });
 }
 
 // Event listener for browser back/forward navigation
@@ -40,26 +48,32 @@ window.onpopstate = () => {
 // Initialize router on page load
 document.addEventListener("DOMContentLoaded", () => {
     if (location.pathname === "/") {
-        history.replaceState({}, "", "/home"); // Update the URL without refreshing the page
-        navigateTo("/home"); // Load the home page content
-        return;
+        history.replaceState({}, "", "/home");
+        navigateTo("/home");
+    } else {
+        navigateTo(location.pathname);
     }
-    navigateTo(location.pathname);
 
-    // Attach click event listeners to navigation links
-    document.querySelectorAll("nav a").forEach(link => {
+    // Attach click event listeners to all navigation links (including the logo)
+    document.querySelectorAll(".nav-link").forEach(link => {
         link.addEventListener("click", event => {
             event.preventDefault();
-            const route = event.target.getAttribute("href");
-            navigateTo(route);
+            const route = link.getAttribute("href");
+
+            if (location.pathname !== route) {
+                navigateTo(route);
+            }
         });
     });
 
-    const logo = document.querySelector(".navbar-brand");
-    if (logo) {
-        logo.addEventListener("click", event => {
+    document.querySelectorAll(".navbar-brand").forEach(link => {
+        link.addEventListener("click", event => {
             event.preventDefault();
-            navigateTo("/home");
+            const route = link.getAttribute("href");
+
+            if (location.pathname !== route) {
+                navigateTo(route);
+            }
         });
-    }
+    });
 });
